@@ -135,8 +135,6 @@
     font-family:'snes-italic';
     font-size: 80px;
     text-transform: none;
-
-    
 }
 
 .subLogo::after{
@@ -146,7 +144,6 @@
     content: "entertainment system";
     display: flex;
     align-items: top;
-    /* margin-top: 20px; */
     justify-content: center;
     color: #d0d2d4;
     font-family:'snes-italic';
