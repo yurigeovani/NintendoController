@@ -1,0 +1,155 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: left;
+
+    height: auto;
+    width: auto;
+
+    /* border-style: solid;
+    border-color: red; */
+}
+
+@font-face {
+    font-family: "snes-italic";
+    src: url("/fonts/SNES\ Italic.ttf");
+}
+
+.circle {
+    background-color: #d0d2d4;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    display: inline-block;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle.left{
+    margin-right: 100px;
+}
+
+.circle.right{
+    margin-left: 100px;
+}
+
+.circleCenterLeft{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #b9bcc1;
+
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.upButton{
+    padding: 30px;
+    background-color: #58585a;
+
+    border-style: solid;
+    border-color: cyan;
+}
+.leftButton{
+    padding: 30px;
+    background-color: #58585a;
+
+    border-style: solid;
+    border-color: darkblue;
+}
+.centerButton{
+    padding: 30px;
+    background-color: #58585a;
+
+    border-style: solid;
+    border-color: darkorange;
+}
+.rightButton{
+    padding: 30px;
+    background-color: #58585a;
+
+    border-style: solid;
+    border-color: deeppink;
+}
+.downButton{
+    padding: 30px;
+    background-color: #58585a;
+
+    border-style: solid;
+    border-color: darkolivegreen;
+}
+
+/* 
+.button {
+    padding: 30px;
+    background-color: #58585a;
+
+    border-style: solid;
+}
+
+.up{
+    border-color: yellow;
+}
+.left{
+    border-color: red;
+}
+.center{
+    border-color: blue;
+}
+.right{
+    border-color: chartreuse;
+}
+.down{
+    border-color: cyan;
+}*/
+
+.circleCenterRight {
+    height: 430px;
+    width: 430px;
+    border-radius: 50%;
+    background-color: #a5a2b5;
+}
+.center {
+    left: 250px;
+    position: absolute;
+    height: 450px;
+    width: 700px;
+    background-color: #d0d2d4;
+
+    z-index: -1;
+}
+
+.logo::after{
+    content: "Super Nintendo";
+    display: flex;
+    align-items: top;
+    margin-top: 20px;
+    justify-content: center;
+    color: #9ea0a4;
+    font-family:'snes-italic';
+    font-size: 80px;
+    text-transform: none;
+
+    
+}
+
+.subLogo::after{
+    padding: 20px 200px;
+    background-color: #9ea0a4;
+
+    content: "entertainment system";
+    display: flex;
+    align-items: top;
+    /* margin-top: 20px; */
+    justify-content: center;
+    color: #d0d2d4;
+    font-family:'snes-italic';
+    font-size: 25px;
+    text-transform: none;   
+}
