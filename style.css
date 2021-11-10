@@ -64,13 +64,18 @@
     border-style: solid;
     border-color: #323233;
     border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .button.up {
     border-bottom: none;
     border-end-start-radius: 0;
     border-end-end-radius: 0;
-    /* border-bottom-color: #58585a; */
 }
 
 .button.left{
@@ -80,9 +85,14 @@
 }
 
 .button.null{
-    /* border-style: none; */
     border-color: #58585a;
     border-radius: 0;
+}
+
+.centerButtonNull{
+    padding: 30px;
+    border-radius: 50%;
+    background-color: #4b4b4d;
 }
 
 .button.right{
@@ -97,6 +107,38 @@
     border-start-end-radius: 0;
 }
 
+.triangle {
+    width: 0; 
+    height: 0;
+}
+
+.triangle.up {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+
+    border-bottom: 45px solid #4b4b4d;
+}
+
+.triangle.left {
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    
+    border-right: 45px solid #4b4b4d;
+}
+
+.triangle.right {
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    
+    border-left: 45px solid #4b4b4d;
+}
+
+.triangle.down {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    
+    border-top: 45px solid #4b4b4d;
+}
 
 .circleCenterRight {
     height: 430px;
