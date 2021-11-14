@@ -10,46 +10,75 @@
 </head>
 <body>
     <div class="container">
-        <div class="circle left">
-            <div class="circleCenterLeft">
-                <div class="button up">
-                    <div class="triangle up"></div>
-                </div>
-                <div class="horizontalButtons">
-                    <div class="button left">
-                        <div class="triangle left"></div>
-                    </div>
-                    <div class="button null">
-                        <div class="centerButtonNull"></div>
-                    </div>
-                    <div class="button right">
-                        <div class="triangle right"></div>
-                    </div>
-                </div>
-                <div class="button down">
-                    <div class="triangle down"></div>
-                </div>
-
+        <div class="cable"></div>
+        <div class="control">
+            <div class="topButtons">
+                <button class="topButton lButton"></button>
+                <button class="topButton rButton"></button>
             </div>
-        </div>
-        <div class="center">
-            <h1>super nintendo</h1>
-            <h2>entertainment system</h2>
-
-            <div class="centerButtons">
-                <div class="divSelect">
-                    <button class="centertButton"></button>
-                    <p>select</p>
-                </div>
-                <div class="divStart">
-                    <button class="centertButton"></button>
-                    <p>start</p>
+            <div class="circle left">
+                <div class="circleCenterLeft">
+                    <button class="directionalButton up">
+                        <div class="triangle up"></div>
+                    </button>
+                    <div class="horizontalDirectionalButtons">
+                        <button class="directionalButton left">
+                            <div class="triangle left"></div>
+                        </button>
+                        <button class="directionalButton null">
+                            <div class="centerButtonNull"></div>
+                        </button>
+                        <button class="directionalButton right">
+                            <div class="triangle right"></div>
+                        </button>
+                    </div>
+                    <button class="directionalButton down">
+                        <div class="triangle down"></div>
+                    </button>
                 </div>
             </div>
+            <div class="center">
+                <div class="centerContent">
+                    <h1>super nintendo</h1>
+                    <h2>entertainment system</h2>
+        
+                    <div class="centerButtons">
+                        <div class="selectButton">
+                            <button></button>
+                            <p>select</p>
+                        </div>
+                        <div class="startButton">
+                            <button></button>
+                            <p>start</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="circle right">
+                <div class="circleCenterRight">
+                    <div class="rightButtons">
+                        <div class="xAndY">
+                            <p>x</p>
+                            <div class="xAndYButtons">
+                                <button class="xButton"></button>
+                                <button class="yButton"></button>
+                            </div>
+                            <p>y</p>
+                        </div>
+                        <div class="aAndB">
+                            <p>a</p>
+                            <div class="aAndBButtons">
+                                <button class="aButton"></button>
+                                <button class="bButton"></button>
+                            </div>
+                            <p>b</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="circle right">
-            <div class="circleCenterRight"></div>
-        </div>
+        <div class="shadow"></div>
     </div>
 </body>
 </html>

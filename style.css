@@ -6,41 +6,91 @@
 * {
     margin: 0;
 }
-.container{
-    
+
+.container {
     display: flex;
-
-    min-height: 90%;
-    min-width: 90%;
-
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+}
+
+.cable {
+    border-left: 20px solid #323233;
+    height: 150px;
+    left: 49.5%;
+    
+    margin-bottom: 0;
+    top: 0;
+    position: absolute;
+}
+
+.control{
+    margin-top: 145px;
+    display: flex;
+    justify-content: center;
 }
 
 .circle {
     background-color: #d0d2d4;
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
-    display: inline-block;
-
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+    z-index: 1;
 }
 
 .circle.left{
-    margin-right: 100px;
+    margin-right: 60px;
 }
 
 .circle.right{
-    margin-left: 100px;
+    margin-left: 60px;
+}
+
+.topButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: absolute;
+}
+
+.topButton{
+    height: 20px;
+    width: 160px;
+    border: none;
+    background-color: #b9bcc1;
+    
+    margin-top: -7px;
+    border-radius: 30px;
+
+    position: absolute;
+}
+
+.topButton:active{
+    margin-top: -7px;
+}
+
+.topButton.lButton {
+    right: 90px;
+}
+.topButton.lButton:active{
+    transform: rotate(-2.5deg);
+}
+
+.topButton.rButton {
+    left: 90px;
+}
+.topButton.rButton:active{
+    transform: rotate(2.5deg);
 }
 
 .circleCenterLeft{
-    height: 300px;
-    width: 300px;
+    padding: 20px;
     border-radius: 50%;
     background-color: #b9bcc1;
 
@@ -52,19 +102,20 @@
     align-items: center;
 }
 
-.horizontalButtons{
+.horizontalDirectionalButtons{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button {
-    height: 60px;
-    width: 60px;
+.directionalButton {
+    height: 45px;
+    width: 45px;
     margin: 0;
     background-color: #58585a;
     border-style: solid;
     border-color: #323233;
+    border-width: 4px;
     border-radius: 8px;
 
     display: flex;
@@ -74,36 +125,40 @@
     
 }
 
-.button.up {
+.directionalButton.up {
     border-bottom: none;
     border-end-start-radius: 0;
     border-end-end-radius: 0;
 }
 
-.button.left{
+.directionalButton.left{
     border-right: none;
     border-start-end-radius: 0;
     border-end-end-radius: 0;
 }
 
-.button.null{
+.directionalButton.null{
     border-color: #58585a;
     border-radius: 0;
 }
 
+.directionalButton.null:active{
+    transform: none;
+}
+
 .centerButtonNull{
-    padding: 30px;
+    padding: 18px;
     border-radius: 50%;
     background-color: #4b4b4d;
 }
 
-.button.right{
+.directionalButton.right{
     border-left: none;
     border-top-left-radius: 0;
     border-end-start-radius: 0;
 }
 
-.button.down{
+.directionalButton.down{
     border-top: none;
     border-start-start-radius: 0;
     border-start-end-radius: 0;
@@ -115,72 +170,76 @@
 }
 
 .triangle.up {
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
 
-    border-bottom: 45px solid #4b4b4d;
+    border-bottom: 25px solid #4b4b4d;
 }
 
 .triangle.left {
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
     
-    border-right: 45px solid #4b4b4d;
+    border-right: 25px solid #4b4b4d;
 }
 
 .triangle.right {
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
     
-    border-left: 45px solid #4b4b4d;
+    border-left: 25px solid #4b4b4d;
 }
 
 .triangle.down {
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
     
-    border-top: 45px solid #4b4b4d;
+    border-top: 25px solid #4b4b4d;
 }
 
 .circleCenterRight {
-    height: 430px;
-    width: 430px;
+    height: 265px;
+    width: 265px;
     border-radius: 50%;
     background-color: #a5a2b5;
-}
-.center {
-    top: 0;
-    position: absolute;
-    height: 450px;
-    width: 700px;
-    background-color: #d0d2d4;
+
+    margin: 0;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
 
-    z-index: -1;
+.center {
+    position: absolute;
+    height: 265px;
+    width: 430px;
+    background-color: #d0d2d4;
+}
+
+.centerContent {
+    left: 25%;
+    position: absolute;
+    z-index: 3;
 }
 
 h1{
     display: flex;
     justify-content: center;
-    height: 50px;
-    width: 278px;
-
-    margin: 30px 0 0 0;
+    height: 41px;
+    
+    margin: 15px 0 0 0;
 
     color: #9ea0a4;
     font-family:'snes-italic';
-    font-size: 66px;
+    font-size: 45px;
     letter-spacing: 1px;
     text-transform: none;
 }
 
 h2{
-    margin-top: 15px;
-    height: 20px;
-    width: 278px;
+    height: 15px;
     background-color: #9ea0a4;
 
     display: flex;
@@ -188,41 +247,115 @@ h2{
     justify-content: center;
     color: #d0d2d4;
     font-family:'snes-italic';
-    font-size: 20px;
-    letter-spacing: 8px;
-    text-transform: none;   
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: none;
 }
 
 .centerButtons {
-    margin-top: 200px;
+    margin-top: 90px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-
-    margin: 180px;
 }
 
-.centertButton{
+.centerButtons button{
     border-style: solid;
     border-color: #8d8f93;
     border-width: 5px;
-    height: 85px;
-    width: 30px;
+    height: 65px;
+    width: 25px;
     border-radius: 50px;
     background-color: #58585a;
-    transform: rotate(48deg);
+    transform: rotate(50deg);
 
-    margin: 0 45px;
+    margin: 0 25px;
+}
+
+.centerButtons button:active{
+    transform: rotate(50deg) scale(0.92);
 }
 
 .centertButton, p {
     color: #9ea0a4;
     font-family:'snes-italic';
-    font-size: 30px;
+    font-size: 20px;
     text-transform: none;
     letter-spacing: 1px;
     
     display: flex;
     justify-content: center;
+}
+
+.rightButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    transform: rotate(50deg);
+}
+
+.rightButtons p{
+    color: #d0d2d4;
+    font-size: 30px;
+    font-weight: bold;
+
+    transform: rotate(-50deg);
+}
+
+.rightButtons button{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: none;
+}
+
+.xAndY {
+    margin: 0 10px 0 0;
+}
+
+.aAndB {
+    margin: 0 0 0 10px;
+}
+
+.xAndYButtons, .aAndBButtons{
+    background-color: #d1d2d4;
+    border-radius: 100px;
+    height: 150px;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.xAndYButtons button {
+    background-color: #8f8bad;
+}
+
+.aAndBButtons button {
+    background-color: #473b69;
+}
+
+.xButton, .aButton{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.yButton, .bButton {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+button:active{
+    transform: scale(0.92);
+}
+
+.shadow {
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 30px;
+    width: 700px;
+    border-radius: 50%;
 }
